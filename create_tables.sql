@@ -1,6 +1,6 @@
 create table if not exists humans (
     id bigint primary key,
-    name varchar(20) unique not null
+    name varchar(32) unique not null
 );
 
 create table if not exists painters (
