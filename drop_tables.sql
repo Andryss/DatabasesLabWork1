@@ -1,1 +1,1 @@
-drop table if exists pictures, houses, painters, humans;
+drop table if exists pictures_painters, pictures, houses, painters, humans;

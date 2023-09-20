@@ -19,8 +19,13 @@ create table if not exists houses (
 create table if not exists pictures (
     id bigint primary key,
     house_id bigint references houses(id),
-    painter_id bigint references painters(id) not null,
     created_date date not null,
     description varchar(512) not null,
     place varchar(512)
+);
+
+create table if not exists pictures_painters (
+    picture_id bigint references pictures(id),
+    painter_id bigint references painters(id),
+    primary key (picture_id, painter_id)
 );
